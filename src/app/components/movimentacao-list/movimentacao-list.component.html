@@ -7,9 +7,11 @@
       <select  id="iCorrentista" [(ngModel)]="correntista" class="form-select">
         <option *ngFor="let c of correntistas" [ngValue]="c" >{{c.cpf}}-{{c.nome}}</option>
       </select>
-    <button class="btn btn-outline-secondary me-md-2 btn-sm" type="button" (click)="listMovimentacoes()">Buscar</button>
-    <a class="btn btn-outline-primary btn-sm" routerLink="/movimentacoes-new">Nova Movimentação</a>
-    <a class="btn btn-outline-primary btn-sm" routerLink="/correntistas">Correntistas</a>
+    <button class="btn btn-outline-primary me-md-2" type="button" (click)="listMovimentacoes()">Buscar</button>
+    <div class="d-grid gap-2 d-md-flex ">
+      <button class="btn btn-outline-primary me-md-2" type="button"routerLink="/movimentacoes-new">Nova Movimentação</button>
+      <a class="btn btn-outline-success" routerLink="/correntistas">Correntistas</a>
+    </div>
   </div>
 <table class="table table-striped">
     <thead>
